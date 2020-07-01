@@ -1,0 +1,47 @@
+\documentclass[handout]{beamer}
+\usepackage{amsmath,amssymb,amsthm}
+
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\title{Создание презентации с помощью LATEX}
+\subtitle{Компьютерная безопасноть(1 курс)}
+\author{Микрюков Данила Александрович}
+\institute{Балтийский Федеральный Университет}
+\date{\today}
+
+\newtheorem*{mylem}{Лемма Евклида}
+\newtheorem*{predl}{Основные свойства сравнений}
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\section{Лемма Евклида}
+\begin{frame}
+\begin{mylem}
+	Пусть $a, b, c$ -- целые числа, $a\mid bc$ и $a$ взаимно просто с $b$. Тогда $a\mid c$
+	\begin{proof}
+	Существуют целые числа $u, v$, такие, что $au + bv = 1$. Умножая последнее равенство на $c$, получаем $acu + bcv = c$. Число a делит левую часть этого равенства и, следовательно, делит правую часть, т.е.$c$. 
+	\end{proof}
+\end{mylem}
+\end{frame}
+\section{Основные свойства сравнений}
+
+\begin{frame}
+\begin{predl}
+	\begin{enumerate}
+		\item $x \equiv x \mod n$, (рефлексивность)
+		\item $x \equiv  y \mod n \Leftrightarrow  y \equiv  x \mod n$, (симметричность)
+		\item $x \equiv y \mod n, y \equiv z \mod n \Rightarrow x \equiv  z \mod n$, (транзитивность)
+		\item $x \equiv  y \mod n, x\textquoteright \equiv  y\textquoteright \mod n \Rightarrow x \pm x\textquoteright \equiv  y \pm y\textquoteright \mod n$,
+		\item $x \equiv  y \mod n, x\textquoteright \equiv  y\textquoteright \mod n \Rightarrow xx\textquoteright \equiv  yy\textquoteright \mod n$,
+		\item $x \equiv  y \mod n, d\mid n \Rightarrow x \equiv  y \mod d$,
+		\item $x \equiv  y \mod n, x \equiv  y \mod m \Rightarrow x \equiv  y \mod nm$
+	\end{enumerate}
+	 
+\end{predl}	
+\end{frame}
+
+\end{document}
